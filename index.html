@@ -189,6 +189,10 @@
         width: 75%;
       }
 
+      .project__languages {
+        font-weight: 900;
+      }
+
       .project__primary__title {
         font-size: 32px;
       }
@@ -236,10 +240,10 @@
         justify-content: center;
       }
 
-      @media(min-width: 1600px) {
+      @media (min-width: 1600px) {
         .background {
           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-          url("assets/hero/hero.jpg") no-repeat;
+            url("assets/hero/hero.jpg") no-repeat;
           height: 800px;
           background-size: cover;
         }
@@ -252,7 +256,7 @@
       @media (max-width: 768px) {
         .background {
           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-          none
+            none;
         }
 
         .projects {
@@ -288,7 +292,7 @@
       @media (max-width: 360px) {
         .background {
           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-            none
+            none;
         }
       }
 
@@ -300,7 +304,7 @@
         .introduction__subtitle {
           font-size: 1.5rem;
         }
-        
+
         .introduction__cta {
           width: 95%;
         }
@@ -310,14 +314,13 @@
         }
 
         .logo {
-          margin: 40px 
+          margin: 40px;
         }
 
         .introduction {
           height: auto;
         }
       }
-
     </style>
     <style amp-boilerplate>
       body {
@@ -540,6 +543,33 @@
             src="assets/projects/spaceX/spaceX.jpeg"
             alt="SpaceX Project"
             title="SpaceX Project"
+          ></amp-img>
+        </a>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="project__content">
+        <h3 class="project__primary__title">
+          <a href="https://booklist-material-app.netlify.com/" title="BookList Project"
+            >04
+            <span class="secondary__title">MyBookList</span>
+          </a>
+        </h3>
+        <p class="project__languages">
+          HTML | CSS | Javascript | Material
+        </p>
+        <p class="project__main">
+          Save the books you have read locally with a beautiful UI and a great UX.
+        </p>
+      </div>
+      <div class="project__image">
+        <a href="https://booklist-material-app.netlify.com/" title="BookList Project - Image">
+          <amp-img
+            width="400"
+            height="200"
+            src="assets/projects/bookList/bookList.png"
+            alt="BookList Project"
+            title="BookList Project"
           ></amp-img>
         </a>
       </div>
