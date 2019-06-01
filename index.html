@@ -278,7 +278,7 @@
         .background {
           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
             none;
-            height: 440px;
+          height: 440px;
         }
 
         .projects__container {
@@ -299,7 +299,7 @@
         }
 
         .project__image img {
-          width: 100%
+          width: 100%;
         }
 
         .introduction__title,
@@ -323,7 +323,7 @@
         .background {
           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
             none;
-            height: 600px;
+          height: 600px;
         }
       }
 
@@ -352,12 +352,18 @@
           height: auto;
         }
 
-        .project__primary__title span {
+        .project__primary__title span  {
           font-size: 20px;
         }
 
         .project__languages {
           font-size: 9px;
+        }
+      }
+
+      @media (orientation: landscape) {
+        .background {
+          height: 440px;
         }
       }
     </style>
@@ -495,7 +501,10 @@
       <section class="projects">
         <div class="project__content">
           <h3 class="project__primary__title">
-            <a href="https://react-travel.netlify.com" title="React Travel Project">
+            <a
+              href="https://react-travel.netlify.com"
+              title="React Travel Project"
+            >
               <span class="secondary__title">React Travel</span>
             </a>
           </h3>
