@@ -175,18 +175,24 @@
         animation: scroll ease 2s infinite;
       }
 
+      .projects__container {
+        display: grid;
+        grid-template-areas: "a b c";
+        grid-template-columns: 33%;
+        grid-gap: 10px;
+        padding: 0 5px;
+        margin: 20px 0;
+      }
+
       .projects {
         display: grid;
-        grid-auto-flow: column;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: 50%;
-        grid-gap: 10px;
-        margin: 100px auto;
+        grid-template-columns: 100%;
+        margin: 10px auto 20px auto;
       }
 
       .project__main {
-        width: 75%;
+        width: 90%;
+        height: 105px;
       }
 
       .project__languages {
@@ -195,6 +201,7 @@
 
       .project__primary__title {
         font-size: 32px;
+        margin: 10px 0;
       }
       .project__primary__title a {
         text-decoration: none;
@@ -203,6 +210,11 @@
       .project__primary__title span {
         font-size: 28px;
       }
+
+      .project__image {
+        max-width: 400px;
+      }
+
       .project__image img {
         width: 400px;
       }
@@ -253,23 +265,31 @@
         }
       }
 
-      @media (max-width: 768px) {
+      @media (min-width: 801px) and (max-width: 1200px) {
+        .projects__container {
+          display: grid;
+          grid-template-areas: "a b";
+          grid-template-columns: 50%;
+        }
+      }
+
+      @media (max-width: 800px) {
         .background {
           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
             none;
         }
 
-        .projects {
+        .projects__container {
+          display: grid;
+          grid-template-areas: "a" "b" "c";
           grid-template-columns: 100%;
           grid-auto-flow: row;
-          justify-items: center;
-          text-align: center;
         }
 
-        .project__main {
-          width: 90%;
-          padding: 20px;
-          margin: 0 auto;
+        .projects {
+          display: grid;
+          grid-template-columns: 100%;
+          margin: 10px auto 20px auto;
         }
 
         .introduction__title,
@@ -452,192 +472,170 @@
         </svg>
       </main>
     </div>
-    <section class="projects">
-      <div class="project__content">
-        <h3 class="project__primary__title">
-          <a href="https://react-travel.netlify.com" title="SpaceX Project"
-            >01
-            <span class="secondary__title">React Travel</span>
+    <div class="projects__container">
+      <section class="projects">
+        <div class="project__content">
+          <h3 class="project__primary__title">
+            <a href="https://react-travel.netlify.com" title="SpaceX Project">
+              <span class="secondary__title">React Travel</span>
+            </a>
+          </h3>
+          <p class="project__languages">
+            HTML | CSS | Javascript | React | Material
+          </p>
+        </div>
+        <div class="project__image">
+          <a
+            href="https://react-travel.netlify.com"
+            title="React Travel Project - Image"
+          >
+            <amp-img
+              width="400"
+              height="200"
+              src="assets/projects/react-travel/travel.jpg"
+              alt="React Travel Project"
+              title="React Travel Project"
+            ></amp-img>
           </a>
-        </h3>
-        <p class="project__languages">
-          HTML | CSS | Javascript | React | Material
-        </p>
-        <p class="project__main">
-          Web App under construction.
-        </p>
-      </div>
-      <div class="project__image">
-        <a
-          href="https://react-travel.netlify.com"
-          title="React Travel Project - Image"
-        >
-          <amp-img
-            width="400"
-            height="200"
-            src="assets/projects/react-travel/travel.png"
-            alt="React Travel Project"
-            title="React Travel Project"
-          ></amp-img>
-        </a>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="project__content">
-        <h3 class="project__primary__title">
+        </div>
+      </section>
+      <section class="projects">
+        <div class="project__content">
+          <h3 class="project__primary__title">
+            <a
+              href="https://santiago-correa-dev.github.io/indecision/"
+              title="Indecision Project"
+            >
+              <span class="secondary__title">Indecision</span>
+            </a>
+          </h3>
+          <p class="project__languages">
+            HTML | CSS | Javascript | React
+          </p>
+        </div>
+        <div class="project__image">
           <a
             href="https://santiago-correa-dev.github.io/indecision/"
-            title="Indecision Project"
-            >02
-            <span class="secondary__title">Indecision</span>
+            title="Indecision Project - Image"
+          >
+            <amp-img
+              width="400"
+              height="200"
+              src="assets/projects/indecision/indecision.png"
+              alt="Indecision Project"
+              title="Indecision Project"
+            ></amp-img>
           </a>
-        </h3>
-        <p class="project__languages">
-          HTML | CSS | Javascript | React
-        </p>
-        <p class="project__main">
-          Web App developed using React to help with those times where you have
-          no idea what to do, and you just want to leave your computer to make
-          the decision for you.
-        </p>
-      </div>
-      <div class="project__image">
-        <a
-          href="https://santiago-correa-dev.github.io/indecision/"
-          title="Indecision Project - Image"
-        >
-          <amp-img
-            width="400"
-            height="200"
-            src="assets/projects/indecision/indecision.png"
-            alt="Indecision Project"
-            title="Indecision Project"
-          ></amp-img>
-        </a>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="project__content">
-        <h3 class="project__primary__title">
-          <a href="https://app.beleafdesign.co" title="Beleaf Project"
-            >03
-            <span class="secondary__title">Beleaf</span>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="project__content">
+          <h3 class="project__primary__title">
+            <a href="https://app.beleafdesign.co" title="Beleaf Project">
+              <span class="secondary__title">Beleaf</span>
+            </a>
+          </h3>
+          <p class="project__languages">
+            HTML | CSS | Javascript | Angular 2 | Node
+          </p>
+        </div>
+        <div class="project__image">
+          <a href="https://app.beleafdesign.co" title="Beleaf Project - Image">
+            <amp-img
+              width="400"
+              height="200"
+              src="assets/projects/beleaf/beleaf.png"
+              alt="Beleaf Project"
+              title="Beleaf Project"
+            ></amp-img>
           </a>
-        </h3>
-        <p class="project__languages">
-          HTML | CSS | Javascript | Angular 2 | Node
-        </p>
-        <p class="project__main">
-          E-commerce website under construction, which is designed to help local
-          designers to sell their products easily and without a hassle.
-        </p>
-      </div>
-      <div class="project__image">
-        <a href="https://app.beleafdesign.co" title="Beleaf Project - Image">
-          <amp-img
-            width="400"
-            height="200"
-            src="assets/projects/beleaf/beleaf.png"
-            alt="Beleaf Project"
-            title="Beleaf Project"
-          ></amp-img>
-        </a>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="project__content">
-        <h3 class="project__primary__title">
+        </div>
+      </section>
+      <section class="projects">
+        <div class="project__content">
+          <h3 class="project__primary__title">
+            <a
+              href="https://spacex-launches-stats.herokuapp.com/"
+              title="SpaceX Project"
+            >
+              <span class="secondary__title">SpaceX</span>
+            </a>
+          </h3>
+          <p class="project__languages">
+            HTML | CSS | Javascript | React | Node
+          </p>
+        </div>
+        <div class="project__image">
           <a
             href="https://spacex-launches-stats.herokuapp.com/"
-            title="SpaceX Project"
-            >04
-            <span class="secondary__title">SpaceX</span>
+            title="SpaceX Project - Image"
+          >
+            <amp-img
+              width="400"
+              height="200"
+              src="assets/projects/spaceX/spaceX.jpeg"
+              alt="SpaceX Project"
+              title="SpaceX Project"
+            ></amp-img>
           </a>
-        </h3>
-        <p class="project__languages">
-          HTML | CSS | Javascript | React | Node
-        </p>
-        <p class="project__main">
-          Web App developed using the SpaceX api to check out all those cool
-          rocket launches that Elon Musk is doing to change the world
-        </p>
-      </div>
-      <div class="project__image">
-        <a
-          href="https://spacex-launches-stats.herokuapp.com/"
-          title="SpaceX Project - Image"
-        >
-          <amp-img
-            width="400"
-            height="200"
-            src="assets/projects/spaceX/spaceX.jpeg"
-            alt="SpaceX Project"
-            title="SpaceX Project"
-          ></amp-img>
-        </a>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="project__content">
-        <h3 class="project__primary__title">
+        </div>
+      </section>
+      <section class="projects">
+        <div class="project__content">
+          <h3 class="project__primary__title">
+            <a
+              href="https://booklist-material-app.netlify.com/"
+              title="BookList Project"
+            >
+              <span class="secondary__title">MyBookList</span>
+            </a>
+          </h3>
+          <p class="project__languages">
+            HTML | CSS | Javascript | Material
+          </p>
+        </div>
+        <div class="project__image">
           <a
             href="https://booklist-material-app.netlify.com/"
-            title="BookList Project"
-            >05
-            <span class="secondary__title">MyBookList</span>
+            title="BookList Project - Image"
+          >
+            <amp-img
+              width="400"
+              height="200"
+              src="assets/projects/bookList/bookList.png"
+              alt="BookList Project"
+              title="BookList Project"
+            ></amp-img>
           </a>
-        </h3>
-        <p class="project__languages">
-          HTML | CSS | Javascript | Material
-        </p>
-        <p class="project__main">
-          Save the books you have read locally with a beautiful UI and a great
-          UX.
-        </p>
-      </div>
-      <div class="project__image">
-        <a
-          href="https://booklist-material-app.netlify.com/"
-          title="BookList Project - Image"
-        >
-          <amp-img
-            width="400"
-            height="200"
-            src="assets/projects/bookList/bookList.png"
-            alt="BookList Project"
-            title="BookList Project"
-          ></amp-img>
-        </a>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="project__content">
-        <h3 class="project__primary__title">
-          <a href="https://www.cloudtask.com/" title="Cloudtask Project"
-            >06
-            <span class="secondary__title">Cloudtask</span>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="project__content">
+          <h3 class="project__primary__title">
+            <a href="https://www.cloudtask.com/" title="Cloudtask Project">
+              <span class="secondary__title">Cloudtask</span>
+            </a>
+          </h3>
+          <p class="project__languages">
+            HTML | CSS | Javascript | Hubspot
+          </p>
+        </div>
+        <div class="project__image">
+          <a
+            href="https://www.cloudtask.com/"
+            title="Cloudtask Project - Image"
+          >
+            <amp-img
+              width="400"
+              height="200"
+              src="assets/projects/cloudtask/cloudtask.jpg"
+              alt="Cloudtask Project"
+              title="Cloudtask Project"
+            ></amp-img>
           </a>
-        </h3>
-        <p class="project__languages">
-          HTML | CSS | Javascript | Hubspot
-        </p>
-        <p class="project__main">
-          Built website to improve potential client outreach, performance and
-          overall UI design.
-        </p>
-      </div>
-      <div class="project__image">
-        <a href="https://www.cloudtask.com/" title="Cloudtask Project - Image">
-          <amp-img
-            width="400"
-            height="200"
-            src="assets/projects/cloudtask/cloudtask.jpg"
-            alt="Cloudtask Project"
-            title="Cloudtask Project"
-          ></amp-img>
-        </a>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
     <footer>
       <nav class="social__media">
         <ul>
